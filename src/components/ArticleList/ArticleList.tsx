@@ -11,9 +11,8 @@ interface IProp {
 
 export default function ArticleList({ items, type}: IProp) {
   const getStyle = classNames( {
-    [style.flexList]: type === 'top',
-    [style.list]: type=== "standart"
-  });
+    [style[type]]: type,
+      });
 
   return (
     <ul className={getStyle}>
